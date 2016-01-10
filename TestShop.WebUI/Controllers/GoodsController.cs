@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +13,21 @@ namespace TestShop.WebUI.Controllers
         // GET: Goods
         public ActionResult Index()
         {
+            using (IDbConnection connection = new SqlConnection())
+            {
+                IDbCommand command = new SqlCommand("SELECT * FROM dbo.Products");
+                command.Connection = connection;
+
+                connection.Open();
+
+                IDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+
+                }
+            }
+
             return View();
         }
     }
