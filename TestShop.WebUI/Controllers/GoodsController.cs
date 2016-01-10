@@ -13,7 +13,7 @@ namespace TestShop.WebUI.Controllers
         // GET: Goods
         public ActionResult Index()
         {
-            using (IDbConnection connection = new SqlConnection())
+            using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TestShop;Integrated Security=True;"))
             {
                 IDbCommand command = new SqlCommand("SELECT * FROM dbo.Products");
                 command.Connection = connection;
