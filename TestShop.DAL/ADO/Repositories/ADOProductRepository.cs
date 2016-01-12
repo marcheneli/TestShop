@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestShop.Domain.Entities;
 using TestShop.Domain.Interfaces.Repositories;
 
 namespace TestShop.DAL.ADO.Repositories
@@ -17,5 +18,16 @@ namespace TestShop.DAL.ADO.Repositories
         {
             this.connection = connection;
         }
+
+        public Product Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Create(Product product) { }
+
+        public void Update(Product product) { }
+
+        public void Delete(Product product) { }
     }
 }
