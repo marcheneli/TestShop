@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestShop.Domain.Interfaces.Repositories
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
     }
 }
