@@ -27,12 +27,24 @@ namespace TestShop.DAL.ADO
             }
         }
 
-        public IProductRepository Customers
+        public ICustomerRepository Customers
         {
             get
             {
                 return null;
             }
         }
+
+        public IOrderRepository Orders
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public void Save() { }
+
+        public void Dispose() { }
     }
 }
